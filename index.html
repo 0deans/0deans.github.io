@@ -10,8 +10,17 @@
 </head>
 <body>
     <div class="center">
-        <h1>Hello and welcome to my porn site</h1>
-        <img src="mem.png" alt="MEM.png">
+        <h1>Мудрое дерево</h1>
+        <img id="meme" src="mem.jpg" alt="MEM.png">
+        <h1>нажми на мудрое дерево</h1>
     </div>
+    
+    <script>
+        let audio = new Audio('porn.mp3');
+        audio.play();
+        document.getElementById('meme').addEventListener('click',e => {
+            audio.play();
+        })
+    </script>
 </body>
 </html>
