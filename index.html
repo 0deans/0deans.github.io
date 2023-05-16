@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Юра Петраков</title>
+    <title>Better site!</title>
     <style>
         body {
-            background: url("unlocker.jpg");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #000000;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        img {
+            cursor: pointer;
+            max-width: 100%;
+            max-height: 80vh;
+        }
+        h1 {
+            color: rgba(255, 255, 255, 0.26);
         }
     </style>
 </head>
 <body>
-
+    <img src="photo.jpg" alt="photo">
+    <h1>Нажмите на изображение чтобы возпроизвести музыку!</h1>
+    <audio src="Beethoven.mp3"></audio>
+    <script>
+        const audio = document.querySelector('audio');
+        document.querySelector('img').onclick = () => {
+            audio.paused ? audio.play() : audio.pause();
+        };
+    </script>
 </body>
 </html>
